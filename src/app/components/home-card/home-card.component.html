@@ -1,0 +1,12 @@
+<div class="card-container">
+    <div class="card"  [ngClass]="{'left-align': cardData.id % 2 === 0,'right-align': cardData.id % 2 !== 0}">
+      <div class="image-content">
+        <img [src]="cardData.imageUrl" alt="{{ cardData.title }} Image"  class="card-image" width="400px">
+      </div>  
+       <div class="card-content">
+          <h3>{{ cardData.title }}</h3>
+          <p>{{ cardData.description }}</p>
+        </div>
+       </div>
+</div>
+  

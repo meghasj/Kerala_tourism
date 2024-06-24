@@ -1,0 +1,34 @@
+<div class="district-info">
+    <h2>{{ district?.name }}</h2>
+    <p>{{ district?.description }}</p>
+  </div>
+  
+  <img src="{{ district?.imageUrl }}" alt="District Image" class="district-image">
+  
+  <ul class="attractions">
+    @for(attraction of district?.popularAttractions; track i){
+      <li class="attraction-card">
+        <img src="{{ attraction?.imageUrl }}" alt="{{ attraction?.name }}">
+        <p>{{ attraction?.name }}</p>
+      </li>
+    }
+  </ul>
+  
+  <h3>Cuisines:</h3>
+  <ul class="attractions">
+    @for(cuisine of district?.cuisines; track i){
+     
+      <li class="attraction-card">
+      <img src="{{ cuisine?.imageUrl }}" alt="{{ cuisine?.name }}">
+      <p>{{ cuisine?.name }}</p>
+    </li>
+    }
+  </ul>
+  
+  <h3>Specialties:</h3>
+  <ul>
+    @for(specialty of district?.specialties; track i){
+      <li>{{ specialty }}</li>
+    }
+  </ul>
+  

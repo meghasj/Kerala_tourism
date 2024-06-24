@@ -1,0 +1,53 @@
+.card {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 10%;
+  display: flex;
+  border: none !important;
+}
+
+.card-content {
+  padding: 20px;
+  width: 50%;
+}
+
+.left-align {
+  flex-direction: row; /* Image on the left, content on the right */
+}
+
+.right-align {
+  flex-direction: row-reverse; /* Content on the left, image on the right */
+}
+.card-image{
+padding-left: 5%;
+border-radius: 10%;
+
+}
+.image-content{
+  border-radius: 10%;
+  margin-left: 5%;
+}
+
+
+
+.card-container {
+  /* Define perspective for 3D effect */
+  perspective: 1000px;
+}
+
+.card .card-image { /* Target image within card */
+  /* Apply initial transform and box-shadow */
+  transform: translateY(0px) skewX(0deg);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card .card-image:hover { /* Target image on hover */
+  /* Enhance transform and shadow on hover */
+  transform: translateY(-5px) skewX(2deg);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Other styles (card, card-content) remain the same */
+
